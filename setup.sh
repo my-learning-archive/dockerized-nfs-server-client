@@ -16,7 +16,7 @@ docker run \
     --privileged=true \
     --net=nfs-network \
     -v ./nfs-storage:/nfs-storage \
-    -e NFS_EXPORT_0='/nfs-storage *(rw,no_subtree_check)' \
+    -e NFS_EXPORT_0='/nfs-storage *(rw,no_root_squash)' \
     -p '2049:2049' \
     erichough/nfs-server
 
